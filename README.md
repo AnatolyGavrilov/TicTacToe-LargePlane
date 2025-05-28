@@ -1,54 +1,59 @@
-# React + TypeScript + Vite
+Руководство по запуску "Крестики-нолики на большой плоскости" (TicTacToe-LargePlane)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Это подробное руководство поможет вам локально запустить расширенную версию игры "Крестики-нолики" на большой плоскости.
 
-Currently, two official plugins are available:
+1. Клонирование репозитория
+   Откройте терминал и выполните команду:
+   git clone https://github.com/AnatolyGavrilov/TicTacToe-LargePlane
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. Перейдите в папку с проектом
+   cd TicTacToe-LargePlane
 
-## Expanding the ESLint configuration
+3. Установка зависимостей
+   Убедитесь, что у вас установлена актуальная версия Node.js (18+)
+   После клонирования установите все необходимые зависимости:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+npm install
+или
+yarn install
+или
+pnpm install
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+4. Запуск приложения
+   Для запуска в режиме разработки выполните:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+npm run dev
+или
+yarn dev
+или
+pnpm dev
+Приложение будет доступно по адресу: http://localhost:5173
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+5. Структура проекта (примерная)
+   TicTacToe-LargePlane/
+   ├── public/ # Статические файлы
+   ├── src/ # Исходный код
+   │ ├── components/ # Компоненты приложения
+   │ ├── styles/ # Глобальные стили
+   │ ├── utils/ # Вспомогательные функции
+   │ ├── App.tsx # Главный компонент
+   │ └── main.tsx # Точка входа
+   ├── .env.example # Пример файла окружения
+   ├── .gitignore # Игнорируемые файлы
+   ├── package.json # Зависимости и скрипты
+   ├── tsconfig.json # Настройки TypeScript
+   └── vite.config.ts # Конфигурация Vite
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+6. Возможные проблемы и решения
+   Ошибки при установке зависимостей
+   Убедитесь, что у вас установлена актуальная версия Node.js (18+)
+
+Попробуйте удалить папку node_modules и файл package-lock.json, затем снова выполните npm install
+
+bash
+rm -rf node_modules package-lock.json
+npm install
+Ошибки при запуске
+Проверьте, все ли необходимые переменные окружения установлены
+Убедитесь, что порт 5173 не занят другим приложением
+Проверьте логи ошибок в терминале
