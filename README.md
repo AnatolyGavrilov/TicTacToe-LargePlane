@@ -5,42 +5,35 @@
 ## 1. Клонирование репозитория
 
 Откройте терминал и выполните команду:
-bash
 git clone https://github.com/AnatolyGavrilov/TicTacToe-LargePlane
 
 ## 2. Перейдите в папку с проектом
 
-bash
 cd TicTacToe-LargePlane
 
 ## 3. Установка зависимостей
 
 Убедитесь, что у вас установлена актуальная версия Node.js (18+).  
 После клонирования установите все необходимые зависимости:
-bash
 npm install
 или
-bash
 yarn install
 или
-bash
 pnpm install
 
 ## 4. Запуск приложения
 
 Для запуска в режиме разработки выполните:
-bash
 npm run dev
 или
-bash
 yarn dev
 или
-bash
 pnpm dev
 Приложение будет доступно по адресу: http://localhost:5173
 
 ## 5. Структура проекта (примерная)
 
+plaintext
 TicTacToe-LargePlane/
 ├── public/ # Статические файлы
 ├── src/ # Исходный код
@@ -62,7 +55,6 @@ TicTacToe-LargePlane/
 Убедитесь, что у вас установлена актуальная версия Node.js (18+).
 
 Попробуйте удалить папку node_modules и файл package-lock.json, затем снова выполните:
-bash
 rm -rf node_modules package-lock.json
 npm install
 
