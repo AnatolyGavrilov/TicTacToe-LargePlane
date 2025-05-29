@@ -5,61 +5,42 @@
 ## 1. Клонирование репозитория
 
 Откройте терминал и выполните команду:
-git clone https://github.com/AnatolyGavrilov/TicTacToe-LargePlane
+
+- `git clone https://github.com/AnatolyGavrilov/TicTacToe-LargePlane`
 
 ## 2. Перейдите в папку с проектом
 
-cd TicTacToe-LargePlane
+- `cd TicTacToe-LargePlane`
 
 ## 3. Установка зависимостей
 
 Убедитесь, что у вас установлена актуальная версия Node.js (18+).  
-После клонирования установите все необходимые зависимости:
-npm install
-или
-yarn install
-или
-pnpm install
+После клонирования установите все необходимые зависимости, с помощью одной из следующих команд:
+
+- `npm install`
+- `yarn install`
+- `pnpm install`
 
 ## 4. Запуск приложения
 
-Для запуска в режиме разработки выполните:
-npm run dev
-или
-yarn dev
-или
-pnpm dev
-Приложение будет доступно по адресу: http://localhost:5173
+Для запуска в режиме разработки выполните одну из следующих команд:
 
-## 5. Структура проекта (примерная)
+- `npm run dev`
+- `yarn dev`
+- `pnpm dev`
+  Приложение будет доступно по адресу: http://localhost:5173
 
-plaintext
-TicTacToe-LargePlane/
-├── public/ # Статические файлы
-├── src/ # Исходный код
-│ ├── components/ # Компоненты приложения
-│ ├── styles/ # Глобальные стили
-│ ├── utils/ # Вспомогательные функции
-│ ├── App.tsx # Главный компонент
-│ └── main.tsx # Точка входа
-├── .env.example # Пример файла окружения
-├── .gitignore # Игнорируемые файлы
-├── package.json # Зависимости и скрипты
-├── tsconfig.json # Настройки TypeScript
-└── vite.config.ts # Конфигурация Vite
+## 5. Возможные проблемы и решения
 
-```
-
-6. Возможные проблемы и решения
 Ошибки при установке зависимостей
 Убедитесь, что у вас установлена актуальная версия Node.js (18+).
 
 Попробуйте удалить папку node_modules и файл package-lock.json, затем снова выполните:
-rm -rf node_modules package-lock.json
-npm install
+
+- `rm -rf node_modules package-lock.json`
+- `npm install`
 
 Ошибки при запуске
 Проверьте, все ли необходимые переменные окружения установлены.
 Убедитесь, что порт 5173 не занят другим приложением.
 Проверьте логи ошибок в терминале.
-```
