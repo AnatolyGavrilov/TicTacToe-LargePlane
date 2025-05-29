@@ -15,12 +15,10 @@ export const GameCell: React.FC<GameCellProps> = ({
     onClick(x, y);
   };
 
-  const boxBackgroundColor = isWinning
-    ? COLORS.BLUE_GRADIENT
-    : "background.paper";
-
+  const boxBackgroundColor = isWinning ? COLORS.BLUE_DARK : "background.paper";
   const boxCursor = value ? "default" : "pointer";
-  const boxBackgrondHover = !value ? "action.hover" : undefined;
+  const boxBackgrondHover = !value ? "rgba(0, 0, 0, 0.05)" : undefined;
+
   return (
     <Box
       sx={{
@@ -55,11 +53,7 @@ export const GameCell: React.FC<GameCellProps> = ({
           color: "text.secondary",
           opacity: 0.6,
         }}
-      >
-        {x},{y}
-      </Box>
+      ></Box>
     </Box>
   );
 };
-
-export default React.memo(GameCell);
